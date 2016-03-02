@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0463A9551C86C10300E02F34 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463A9541C86C10300E02F34 /* APIManager.swift */; };
 		0480B8F71C7AE6BE00FA6597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B8F61C7AE6BE00FA6597 /* AppDelegate.swift */; };
 		0480B8F91C7AE6BE00FA6597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B8F81C7AE6BE00FA6597 /* ViewController.swift */; };
 		0480B8FC1C7AE6BE00FA6597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480B8FA1C7AE6BE00FA6597 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0463A9541C86C10300E02F34 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0480B8F31C7AE6BE00FA6597 /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480B8F61C7AE6BE00FA6597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0480B8F81C7AE6BE00FA6597 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		0480B9271C7B10E300FA6597 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0463A9541C86C10300E02F34 /* APIManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0463A9551C86C10300E02F34 /* APIManager.swift in Sources */,
 				0480B8FF1C7AE6BE00FA6597 /* MusicVideo.xcdatamodeld in Sources */,
 				0480B8F91C7AE6BE00FA6597 /* ViewController.swift in Sources */,
 				0480B8F71C7AE6BE00FA6597 /* AppDelegate.swift in Sources */,
@@ -522,6 +526,7 @@
 				0480B9201C7AE6BE00FA6597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0480B9211C7AE6BE00FA6597 /* Build configuration list for PBXNativeTarget "MusicVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				0480B9231C7AE6BE00FA6597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0480B9241C7AE6BE00FA6597 /* Build configuration list for PBXNativeTarget "MusicVideoUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				0480B9261C7AE6BE00FA6597 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
