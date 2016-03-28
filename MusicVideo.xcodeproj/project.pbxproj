@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045800B11CA8FD97003C71A8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045800B01CA8FD97003C71A8 /* File.swift */; };
+		045800B31CA9065C003C71A8 /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045800B21CA9065C003C71A8 /* MusicVideo.swift */; };
 		0463A9551C86C10300E02F34 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463A9541C86C10300E02F34 /* APIManager.swift */; };
 		0480B8F71C7AE6BE00FA6597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B8F61C7AE6BE00FA6597 /* AppDelegate.swift */; };
 		0480B8F91C7AE6BE00FA6597 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B8F81C7AE6BE00FA6597 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045800B01CA8FD97003C71A8 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		045800B21CA9065C003C71A8 /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 		0463A9541C86C10300E02F34 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0480B8F31C7AE6BE00FA6597 /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480B8F61C7AE6BE00FA6597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045800AF1CA8FD79003C71A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				045800B01CA8FD97003C71A8 /* File.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		0480B8EA1C7AE6BE00FA6597 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 		0480B8F51C7AE6BE00FA6597 /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				045800AF1CA8FD79003C71A8 /* Utils */,
 				0480B92A1C7B116C00FA6597 /* Supporting files */,
 				0480B9271C7B10E300FA6597 /* Model */,
 				0480B9291C7B112B00FA6597 /* View */,
@@ -131,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0463A9541C86C10300E02F34 /* APIManager.swift */,
+				045800B21CA9065C003C71A8 /* MusicVideo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045800B11CA8FD97003C71A8 /* File.swift in Sources */,
 				0463A9551C86C10300E02F34 /* APIManager.swift in Sources */,
 				0480B8FF1C7AE6BE00FA6597 /* MusicVideo.xcdatamodeld in Sources */,
+				045800B31CA9065C003C71A8 /* MusicVideo.swift in Sources */,
 				0480B8F91C7AE6BE00FA6597 /* ViewController.swift in Sources */,
 				0480B8F71C7AE6BE00FA6597 /* AppDelegate.swift in Sources */,
 			);
