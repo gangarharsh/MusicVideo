@@ -58,6 +58,8 @@ class Video {
         return _vReleaseDate
     }
 
+    //created from the UI
+    var imageData:NSData?
     
     init(data: JSONDictionary)
     {
