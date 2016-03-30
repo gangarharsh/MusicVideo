@@ -8,7 +8,7 @@
 import Foundation
 
 class APIManager{
-    func loadData(urlString:String, completion: (result:String) -> Void){
+    func loadData(urlString:String, completion: [Video] -> Void){
         
         let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
         let session = NSURLSession(configuration: config)
@@ -17,29 +17,38 @@ class APIManager{
         let task = session.dataTaskWithURL(url){
             (data, response, error) -> Void in
             if error != nil{
-                dispatch_async(dispatch_get_main_queue()){
-                    completion(result: (error!.localizedDescription))
-                }
+                
+                    print(error!.localizedDescription)
+                
             }
             else{
                 do{
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary {
-                    print(json)
+                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary,
+                    feeds = json["feed"] as? JSONDictionary,
+                    entries = feeds["entry"] as? JSONArray{
+                    var videos = [Video]()
+                        for entry in entries{
+                            let entry = Video(data: entry as! JSONDictionary)
+                            videos.append(entry)
+                        }
+                        let i = videos.count
+                    print("Videos count in API-Manger = \(i)")
+                        
                     let priority = DISPATCH_QUEUE_PRIORITY_HIGH
                         dispatch_async(dispatch_get_global_queue(priority, 0)){
                     dispatch_async(dispatch_get_main_queue()){
-                        completion(result: "JSON Serialization successs")
+                        completion(videos)
                     }
                 }
                 }
                 }
                 catch{
-                    dispatch_async(dispatch_get_main_queue()){
-                       completion(result: "error in NSJSONserialization")
-                    }
+                    
+                       print("error in NSJSONserialization")
+                    
                 }
             }
         }
         task.resume()
-    }
+     }
 }

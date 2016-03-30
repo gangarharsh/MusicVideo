@@ -9,27 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var videos = [Video]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/in/rss/topmusicvideos/limit=10/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/in/rss/topmusicvideos/limit=20/json", completion: didLoadData)
         
         
     }
     
-    func didLoadData(result:String){
-        print(result)
+    func didLoadData(video: [Video]){
         
-        let alert = UIAlertController(title: result, message: nil, preferredStyle: .Alert)
-        
-        let okAction = UIAlertAction (title: "Ok", style: .Default) { (action) -> Void in
-            //do something
+        self.videos = video
+        for (index,item) in videos.enumerate(){
+            print(" [\(index+1)] name = \(item.vName)")
         }
-        
-        alert.addAction(okAction)
-        
-        self.presentViewController(alert, animated: true, completion: nil)
         
     }
 
