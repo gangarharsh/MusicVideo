@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func reachabilityChanged(notification: NSNotification)
     {
         reachability = notification.object as? Reachability
-        statusChangedWithReachability(reachability!)
+        //statusChangedWithReachability(reachability!)
     }
     
     func statusChangedWithReachability(currentReachabilityStatus: Reachability)
